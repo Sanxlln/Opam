@@ -5,6 +5,6 @@ project(MyProgram)
 message("${PROJECT_NAME}")
 
 set(SOURSES "main.cpp"
-            "lib.cpp")
+            "list.cpp")
 
 add_executable(${PROJECT_NAME} ${SOURSES})
