@@ -2,16 +2,13 @@
 #include <iostream>  
 
 using namespace blgt;
-
 int main() {
     list l;
-    l.insert_front(42);
-
-    bool passed = false;
-    if (l.size() == 1 && *l.begin() == 42) {
-        passed = true;
-    }
-
+    l.insert_front(1);
+    l.insert_front(2);
+    l.insert_front(3);
+    bool passed = l.size() == 3;
+    
     if (passed) {
         std::cout << "[OK]";
         return 0;
@@ -20,4 +17,3 @@ int main() {
         return 1;
     }
 }
-

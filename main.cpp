@@ -1,46 +1,45 @@
 #include <iostream>
 #include "list.hpp"
 
-using namespace std;
 using namespace blgt;
 
 int main() {
     list myList;
 
-    cout << "Adding values to the front: twenty-five, fifteen" << endl;
+    std::cout << "Adding values to the front: twenty-five, fifteen" << std::endl;
     myList.insert_front(25);
     myList.insert_front(15);
 
-    cout << "Adding values to the back: thirty-five, forty-five" << endl;
+    std::cout << "Adding values to the back: thirty-five, forty-five" <<std::endl;
     myList.insert_back(35);
     myList.insert_back(45);
 
-    cout << "\nList contents:" << endl;
+    std::cout << "\nList contents:" <<std::endl;
     for (auto it = myList.begin(); it != myList.end(); ++it) {
-        cout << *it << " ";
+        std::cout << *it << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "\nCurrent list size: " << myList.size() << endl;
-    cout << "Is the list empty? " << (myList.empty() ? "Yes" : "No") << endl;
+    std::cout << "\nCurrent list size: " << myList.size() << std::endl;
+    std::cout << "Is the list empty? " << (myList.empty() ? "Yes" : "No") << std::endl;
 
-    cout << "\nRemoving the first element..." << endl;
+    std::cout << "\nRemoving the first element..." << std::endl;
     myList.erase_front();
 
-    cout << "Removing the last element..." << endl;
+    std::cout << "Removing the last element..." << std::endl;
     myList.erase_back();
 
-    cout << "\nAdding new value to the back: twenty-two" << endl;
+    std::cout << "\nAdding new value to the back: twenty-two" << std::endl;
     myList.insert_back(22);
 
-    cout << "\nList contents after changes:" << endl;
+    std::cout << "\nList contents after changes:" << std::endl;
     for (auto it = myList.begin(); it != myList.end(); ++it) {
-        cout << *it << " ";
+        std::cout << *it << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
-    cout << "\nFinal list size: " << myList.size() << endl;
-    cout << "Is the list now empty? " << (myList.empty() ? "Yes" : "No") << endl;
+    std::cout << "\nFinal list size: " << myList.size() << std::endl;
+    std::cout << "Is the list now empty? " << (myList.empty() ? "Yes" : "No") << std::endl;
 
     return 0;
 }
