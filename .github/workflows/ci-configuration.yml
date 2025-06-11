@@ -38,3 +38,4 @@ jobs:
 
     - name: Run tests via CTest
       run: ctest --test-dir ${{ github.workspace }}/build --output-on-failure
+
